@@ -3,9 +3,15 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import {Navbar,Nav,Form,Button,FormControl} from "react-bootstrap";
 
 class Menu extends React.Component{
+    constructor(props) {
+        super(props);
+        this.state={
+            cartQuantity:  0
+        }
+    }
     render() {
         return <div style={{padding:'20px'}}>
-            <Navbar bg="primary" variant="dark" expand="lg">
+            <Navbar bg="dark" variant="dark" expand="lg">
                 <Navbar.Brand href="#">Shopping Cart</Navbar.Brand>
                 <Navbar.Toggle aria-controls="navbarScroll"/>
                 <Navbar.Collapse id="navbarScroll">
@@ -30,6 +36,9 @@ class Menu extends React.Component{
                         <Button variant="outline-success">Search</Button>
                     </Form>
                 </Navbar.Collapse>
+                <div align='right' style={{padding: '10px'}}>
+                     <Button variant="danger" size="sm" disabled={true}>{this.state.cartQuantity}</Button>
+                </div>
             </Navbar>
         </div>;
     }

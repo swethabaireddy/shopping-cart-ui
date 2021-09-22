@@ -2,8 +2,8 @@ import React from 'react';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import Menu from "./Menu";
 import Product from "./Product";
-import axios from 'axios';
 import {Col, Container, Row, Spinner} from "react-bootstrap";
+import axios from "axios";
 
 class Home extends React.Component {
 
@@ -23,6 +23,15 @@ class Home extends React.Component {
             this.setState({spinner_hidden: true})
        })
     }
+    // componentDidMount() {
+    //     express.get(', function (request,response){
+    //         response.header("Access-Control-Allow-Origin", "*");
+    //         response.header("Access-Control-Allow-Headers", "Origin, X-Requested-With, Content-Type, Accept");
+    //         this.setState({p_name_1: response.data[0].itemName})
+    //         this.setState({p_name_2: response.data[1].itemName})
+    //         this.setState({spinner_hidden: true})
+    //     })
+    // }
 
     render(){
        return <div >
